@@ -10,7 +10,6 @@ static int		ft_base_size(char *base)
 		return (0);
 	while (base[i] != '\0')
 	{
-
 		if (base[i] == '+' ||
 			base[i] == '-' ||
 			base[i] < 32 ||

@@ -15,7 +15,7 @@ int handle_argument_format(int c, va_list args)
 		counter = handle_integer(va_arg(args, signed int));
 	if (c == 'u')
 		counter = handle_unsigned_decimal(va_arg(args, unsigned int));
-	if (c == 'x')
+	if (c == 'x' || c == 'X')
 		counter = handle_hexadecimal(va_arg(args, unsigned int));
 	if (c == '%')
 		counter = handle_percent(c);
