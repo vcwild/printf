@@ -1,10 +1,5 @@
 #include <ft_printf.h>
 
-// int parse_input(char *str, va_list args)
-// {
-// 	// TODO: Maybe parse input and return the number of bytes parsed?
-// }
-
 static int handle_input(const char *str, va_list args)
 {
 	int i;
@@ -19,7 +14,6 @@ static int handle_input(const char *str, va_list args)
 		else if ((str[i] == '%') && str[i + 1])
 		{
 			i++;
-			// parse_input(&str[++i], args); --> Probably do not need because no flags are used
 			if (is_argument(str[i]))
 				counter += handle_argument_format(str[i], args);
 			else if (str[i])
