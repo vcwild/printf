@@ -1,5 +1,5 @@
-#include "helpers/helpers.h"
-#include "handlers.h"
+#include <helpers.h>
+#include <handlers.h>
 #include <stdio.h>
 
 int print_preceding_string(char *str)

@@ -1,4 +1,4 @@
-#include "helpers/helpers.h"
+#include <helpers.h>
 
 int handle_char(char c)
 {
