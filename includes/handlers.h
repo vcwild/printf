@@ -6,6 +6,8 @@
 #define	PRECEDING_STR	"0x"
 
 #include <stdarg.h>
+#include <validators.h>
+#include <helpers.h>
 
 int	handle_argument_format(int c, va_list args);
 int	handle_char(char c);
