@@ -5,8 +5,6 @@
 #define	DECIMAL_BASE	"0123456789"
 #define	PRECEDING_STR	"0x"
 
-#include "helpers/helpers.h"
-#include "validators/validators.h"
 #include <stdarg.h>
 
 int	handle_argument_format(int c, va_list args);
