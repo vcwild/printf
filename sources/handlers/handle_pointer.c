@@ -1,5 +1,4 @@
-#include <helpers.h>
-#include <handlers.h>
+#include <ft_printf.h>
 #include <stdio.h>
 
 int print_preceding_string(char *str)

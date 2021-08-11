@@ -1,8 +1,8 @@
-#include <helpers.h>
+#include <ft_printf.h>
 
 int handle_char(char c)
 {
-	int counter;
+	int	counter;
 
 	counter = 0;
 	ft_putchar(c);

@@ -2,8 +2,8 @@
 
 static int handle_input(const char *str, va_list args)
 {
-	int i;
-	int counter;
+	int	i;
+	int	counter;
 
 	i = 0;
 	counter = 0;
@@ -27,8 +27,8 @@ static int handle_input(const char *str, va_list args)
 int	ft_printf(const char *fmt, ...)
 {
 	va_list		args;
-	const char *str;
-	int		counter;
+	const char	*str;
+	int			counter;
 
 	counter = 0;
 	str = ft_strdup(fmt);

@@ -1,8 +1,8 @@
-#include <handlers.h>
+#include <ft_printf.h>
 
 int handle_argument_format(int c, va_list args)
 {
-	int counter;
+	int	counter;
 
 	counter = 0;
 	if (c == 'c')
