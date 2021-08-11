@@ -3,8 +3,6 @@ NAME = libftprintf.a
 CC=gcc
 CC_FLAGS=-Wall -Wextra -Werror
 
-SAFE_MAKEDIR = mkdir -p
-
 INCLUDES_PATH = ./includes
 OBJECTS_PATH = ./objects
 SOURCES_PATH = ./sources
@@ -26,37 +24,24 @@ SOURCE_FILES = ft_printf.c \
 
 SOURCES = $(addprefix $(SOURCES_PATH)/,$(SOURCE_FILES))
 
-OBJECT_FILES = ft_printf.o \
-					is_argument.o \
-					ft_putchar.o \
-					ft_strlen.o \
-					ft_itoa_base.o \
-					ft_strdup.o \
-					handle_argument_format.o \
-					handle_char.o \
-					handle_string.o \
-					handle_pointer.o \
-					handle_integer.o \
-					handle_unsigned_decimal.o \
-					handle_hexadecimal.o \
-					handle_percent.o
+OBJECT_FILES = $(SOURCE_FILES:.c=.o)
 
 OBJECTS = $(addprefix $(OBJECTS_PATH)/,$(OBJECT_FILES))
 
-INCLUDE_FILES = ft_printf.h \
-								handlers.h \
-								validators.h \
-								helpers.h
+INCLUDE_FILES = ft_printf.h
 
 INCLUDES = $(addprefix $(INCLUDES_PATH)/,$(INCLUDE_FILES))
 
 all: $(NAME)
 
-$(NAME): $(OBJECTS) $(OBJECTS_DIR)
+make_dirs:
+	mkdir -p $(OBJECTS_PATH)/handlers/validators
+	mkdir -p $(OBJECTS_PATH)/handlers/helpers
+
+$(NAME): make_dirs $(OBJECTS) $(OBJECTS_DIR)
 	@ar rcs $(NAME) $(OBJECTS)
 
-$(OBJECTS_PATH)/%.o: $(SOURCES) $(INCLUDES)
-	mkdir -p $(OBJECTS_PATH)
+$(OBJECTS_PATH)/%.o: $(SOURCES_PATH)/%.c
 	@$(CC) $(CC_FLAGS) -I $(INCLUDES_PATH) -o $@ -c $<
 
 clean:
