@@ -50,14 +50,13 @@ INCLUDE_FILES = ft_printf.h \
 
 INCLUDES = $(addprefix $(INCLUDES_PATH)/,$(INCLUDE_FILES))
 
-$(shell mkdir -p $(OBJECTS_PATH))
-
 all: $(NAME)
 
 $(NAME): $(OBJECTS) $(OBJECTS_DIR)
 	@ar rcs $(NAME) $(OBJECTS)
 
 $(OBJECTS_PATH)/%.o: $(SOURCES) $(INCLUDES)
+	mkdir -p $(OBJECTS_PATH)
 	@$(CC) $(CC_FLAGS) -I $(INCLUDES_PATH) -o $@ -c $<
 
 clean:
