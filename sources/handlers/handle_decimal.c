@@ -1,6 +1,6 @@
 #include <ft_printf.h>
 
-static int	handle_negative_integer(int *value)
+static int	handle_negative_integer(signed long *value)
 {
 	int	counter;
 
@@ -14,7 +14,7 @@ static int	handle_negative_integer(int *value)
 	return (counter);
 }
 
-int	handle_integer(signed int value)
+int	handle_decimal(signed long value)
 {
 	int		counter;
 	char	*str;
