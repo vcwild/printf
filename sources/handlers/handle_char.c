@@ -1,6 +1,6 @@
 #include <ft_printf.h>
 
-int handle_char(char c)
+int	handle_char(char c)
 {
 	int	counter;
 

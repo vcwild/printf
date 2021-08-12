@@ -1,6 +1,6 @@
 #include <ft_printf.h>
 
-static int		ft_base_size(char *base)
+static int	ft_base_size(char *base)
 {
 	int	i;
 	int	j;
@@ -10,10 +10,10 @@ static int		ft_base_size(char *base)
 		return (0);
 	while (base[i] != '\0')
 	{
-		if (base[i] == '+' ||
-			base[i] == '-' ||
-			base[i] < 32 ||
-			base[i] > 126)
+		if (base[i] == '+'
+			|| base[i] == '-'
+			|| base[i] < 32
+			|| base[i] > 126)
 			return (0);
 		j = 1;
 		while (base[i + j] != '\0')

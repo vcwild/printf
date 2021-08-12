@@ -1,6 +1,6 @@
 #include <ft_printf.h>
 
-static int handle_input(const char *str, va_list args)
+static int	handle_input(const char *str, va_list args)
 {
 	int	i;
 	int	counter;
