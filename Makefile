@@ -1,7 +1,7 @@
 NAME = libftprintf.a
 
-CC=gcc
-CC_FLAGS=-Wall -Wextra -Werror
+CC = gcc
+CC_FLAGS = -Wall -Wextra -Werror
 
 INCLUDES_PATH = ./includes
 OBJECTS_PATH = ./objects
@@ -17,7 +17,7 @@ SOURCE_FILES = ft_printf.c \
 				handlers/handle_char.c \
 				handlers/handle_string.c \
 				handlers/handle_pointer.c \
-				handlers/handle_integer.c \
+				handlers/handle_decimal.c \
 				handlers/handle_unsigned_decimal.c \
 				handlers/handle_hexadecimal.c \
 				handlers/handle_percent.c
