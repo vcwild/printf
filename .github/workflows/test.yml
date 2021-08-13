@@ -1,0 +1,21 @@
+name: Unit tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  tests:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Clone testing repo
+      run: |
+        git clone https://github.com/paulo-santana/ft_printf_tester.git
+    - name: Run tests
+      run: |
+        cd ft_printf_tester
+        chmod 755 test
+        sh test m
