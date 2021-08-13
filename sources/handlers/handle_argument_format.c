@@ -10,7 +10,7 @@ int	handle_argument_format(int c, va_list args)
 	if (c == 's')
 		counter = handle_string(va_arg(args, char *));
 	if (c == 'p')
-		counter = handle_pointer(va_arg(args, long unsigned));
+		counter = handle_pointer(va_arg(args, void *));
 	if (c == 'i' || c == 'd')
 		counter = handle_decimal(va_arg(args, signed int));
 	if (c == 'u')
