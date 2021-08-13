@@ -21,8 +21,8 @@ jobs:
         pip install norminette
     - name: Test norme
       run: |
-        norminette sources | grep -i Error
-        norminette includes | grep -i Error
+        norminette sources
+        norminette includes
 
   build:
     runs-on: ubuntu-latest
