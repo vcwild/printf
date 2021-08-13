@@ -6,11 +6,8 @@ int	handle_string(char *str)
 
 	counter = 0;
 	if (!str)
-		str = "(null)";
+		str = EXCEPTION_STR;
 	while (str[counter] != '\0')
-	{
-		ft_putchar(str[counter]);
-		counter++;
-	}
+		counter += ft_putchar(str[counter]);
 	return (counter);
 }

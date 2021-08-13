@@ -9,6 +9,9 @@
 # define	HEX_BASE_UPPER		"0123456789ABCDEF"
 # define	DECIMAL_BASE		"0123456789"
 # define	PRECEDING_STR		"0x"
+# define	EXCEPTION_STR		"(null)"
+# define	ZERO_EXCEPTION_STR	"(nil)"
+
 
 int		ft_printf(const char *fmt, ...);
 
