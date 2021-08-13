@@ -1,7 +1,6 @@
 #include <ft_printf.h>
-#include <stdio.h>
 
-int	print_preceding_string(char *str)
+static int	print_preceding_string(char *str)
 {
 	int	counter;
 
@@ -9,7 +8,7 @@ int	print_preceding_string(char *str)
 	return (counter);
 }
 
-int	handle_zero_exception(void)
+static int	print_zero_exception(void)
 {
 	int		counter;
 	char	*str;
@@ -28,7 +27,7 @@ int	handle_pointer(long unsigned ptr_addr)
 
 	if (ptr_addr == 0)
 	{
-		counter = handle_zero_exception();
+		counter = print_zero_exception();
 		return (counter);
 	}
 	counter = print_preceding_string(PRECEDING_STR);
