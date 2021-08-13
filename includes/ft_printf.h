@@ -12,7 +12,6 @@
 # define	EXCEPTION_STR		"(null)"
 # define	ZERO_EXCEPTION_STR	"(nil)"
 
-
 int		ft_printf(const char *fmt, ...);
 
 int		handle_argument_format(int c, va_list args);
