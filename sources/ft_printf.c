@@ -26,7 +26,7 @@ static int	handle_input(const char *str, va_list args)
 
 int	ft_printf(const char *fmt, ...)
 {
-	va_list		args;
+	va_list				args;
 	const char	*str;
 	int			counter;
 
